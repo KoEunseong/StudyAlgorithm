@@ -8,9 +8,6 @@ data.sort()
 
 count = 0
 
-
-
-
 index = 0
 
 for item in data:
@@ -36,29 +33,6 @@ for item in data:
             break
             
     index += 1
-    
-    
-            
-    
-    
-    
-    
-    # sum = data[start] + data[end]
-    # if sum < item:
-    #     if start != end - 1:
-    #         start += 1
-    #     else:
-    #         end += 1
-    #         ip += 1
-    #         continue
-    # elif sum > item:
-    #     if start != end - 1:
-    #         end -= 1
-    #     else:
-            
-    #         continue
-    # else :
-    #     count += 1
-    #     end += 1
+
 print(count)
     
