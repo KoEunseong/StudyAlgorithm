@@ -13,7 +13,7 @@ for _ in range(N):
             if len(stack) == 0:
                 isTrue = False
                 break
-            stack.pop(0)
+            stack.pop()
     
     if len(stack) == 0 and isTrue:
         print('YES')
