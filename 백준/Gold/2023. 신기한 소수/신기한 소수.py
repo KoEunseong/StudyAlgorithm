@@ -27,15 +27,15 @@ def DFS(num):
     
     if len(str(num)) == N:
         print(num)
-        # return
-    else :
-        for item in range(1, 10) :
-            if item % 2 == 0 :
-                continue
-            if isSosu(num * 10 + item) : 
-                DFS(num * 10 + item)
+        return
+    
+    for item in range(1, 10) :
+        if item % 2 == 0 :
+            continue
+        if isSosu(num * 10 + item) : 
+            DFS(num * 10 + item)
             
-        # return
+    return
     
 
 DFS(2)
