@@ -47,8 +47,7 @@ visited = [False for _ in range(N + 1)]
 distance = [0 for _ in range(N + 1)]    
 
 BFS(index)
-distance.sort()
-print(distance[N])
+print(max(distance))
 # for i in range(N):
     # visited = [False for _ in range(N + 1)]
     # distance = [0 for _ in range(N + 1)]    
