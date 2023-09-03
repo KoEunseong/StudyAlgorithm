@@ -1,15 +1,14 @@
 import sys
-import math
-M,N = map(int, sys.stdin.readline().split())
+start, end = map(int , sys.stdin.readline().split())
 
-def isSosu(N):
-    if N == 1:
-        return False
-    
-    for i in range(2, int(math.sqrt(N)) + 1):
-        if N % i == 0:
-            return False
-    return True
-for i in range(M,N + 1):
-    if isSosu(i):
+data = [True for i in range(end + 1)]
+data[1] = False
+
+for i in range(2, end + 1):
+    if data[i] == True :
+        for j in range(i + i, end + 1, i):
+            data[j] = False
+
+for i in range(start, end + 1):
+    if data[i] :
         print(i)
