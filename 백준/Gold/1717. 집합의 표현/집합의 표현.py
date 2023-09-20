@@ -16,9 +16,6 @@ def union(n1, n2):
 
 def find(n1):
     
-    # if n1 == n2 :
-    #     return n1
-    
     if n1 == data[n1]: #대표 노드
         return n1
     
@@ -32,8 +29,8 @@ for _ in range(M):
     a, b, c = map(int ,sys.stdin.readline().split())
     
     if a == 0 :
-        if b > c :
-            b, c = c, b
+        # if b > c :
+        #     b, c = c, b
         union(b , c) # 작은 수 , 큰 수
 
     else :
