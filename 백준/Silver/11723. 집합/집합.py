@@ -2,39 +2,40 @@ import sys
 
 N = int(input())
 
-set_data = set()
-all_set = set(str(i) for i in range(1,20 + 1))
+dic = {}
+all = {i : i for i in range(1, 20 + 1)}
 
-for _ in range(N):
+for i in range(N):
+    item = tuple(sys.stdin.readline().split())
     
-    line = sys.stdin.readline().strip()
-    if line == 'all':
-        set_data = all_set
-        continue
-    if line == 'empty':
-        set_data = set()
-        continue
-    
-    op, num = line.split()
-    
-    
-    if op == 'add':
-        set_data.add(num)
-    elif op == 'remove':
-        if num in set_data:
-            set_data.remove(num)
-        else :
-            continue
+    if item[0] == 'add':
+        dic[int(item[1])] = int(item[1])
         
-    elif op == 'check':
-        if num in set_data:
+    elif item[0] == 'remove':
+        if int(item[1]) in dic:
+            del dic[int(item[1])]
+        
+    elif item[0] == 'check':
+        if int(item[1]) in dic:
             print(1)
         else :
             print(0)
-    elif op == 'toggle':
-        if num in set_data:
-            set_data.remove(num)
+            
+    elif item[0] == 'toggle':
+        if int(item[1]) in dic:
+            del dic[int(item[1])]
         else :
-            set_data.add(num)
+            dic[int(item[1])] = int(item[1])
+        
+    elif item[0] == 'all':
+        dic = all.copy()
+    else :
+        dic = {}
     
+        
+    
+
+
+
+
     
